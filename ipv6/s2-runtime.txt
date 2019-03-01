@@ -1,0 +1,2 @@
+table_set_default ipv6_lpm drop
+table_add ipv6_lpm ipv6_forward fe80::5678/128 => 00:00:00:00:02:02 1

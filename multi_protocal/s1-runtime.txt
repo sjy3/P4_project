@@ -1,0 +1,6 @@
+table_set_default ipv6_lpm drop
+table_set_default ipv4_lpm drop
+table_set_default mytunnel_lpm drop
+table_add ipv4_lpm ipv4_forward 10.0.2.2/32 => 00:00:00:02:02:00 2
+table_add ipv6_lpm ipv6_forward fe80::5678/128 => 00:00:00:02:02:00 2
+table_add mytunnel_lpm mytunnel_forward 10.10.2.2/32 => 00:00:00:02:02:00 2

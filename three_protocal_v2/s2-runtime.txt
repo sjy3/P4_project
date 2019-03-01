@@ -1,0 +1,8 @@
+table_set_default ipv4_lpm drop
+table_set_default mytunnel_lpm drop
+table_set_default ipv6_lpm drop
+table_set_default sinet_lpm drop
+table_add ipv4_lpm ipv4_forward 10.0.2.2/32 => 00:00:00:00:02:02 1
+table_add mytunnel_lpm mytunnel_forward 10.0.1.1/32 => 0x0a0a0202 0x0a0a0101 00:00:00:01:02:00 2
+table_add ipv6_lpm ipv6_forward 10.0.1.1/32 => 0xfe800000000000000000000000001234 0xfe800000000000000000000000005678 00:00:00:01:02:00 3
+table_add sinet_lpm sinet_forward 10.0.1.1/32 => 0x0f0f0f0f0f0f0f0f000000000000000000000000000000000000000000000000 0xff00ff00ff00ff00000000000000000000000000000000000000000000000000 00:00:00:01:02:00 4

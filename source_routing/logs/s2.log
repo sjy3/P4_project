@@ -1,0 +1,550 @@
+Calling target program-options parser
+Adding interface s2-eth1 as port 1
+[19:18:37.977] [bmv2] [D] [thread 4418] Adding interface s2-eth1 as port 1
+Adding interface s2-eth2 as port 2
+[19:18:37.980] [bmv2] [D] [thread 4418] Adding interface s2-eth2 as port 2
+Adding interface s2-eth3 as port 3
+[19:18:37.982] [bmv2] [D] [thread 4418] Adding interface s2-eth3 as port 3
+I1012 19:18:37.984453010    4418 server_builder.cc:247]      Synchronous server. Num CQs: 1, Min pollers: 1, Max Pollers: 2147483647, CQ timeout (msec): 1000
+Server listening on 0.0.0.0:50052
+Thrift server was started
+New connection
+P4Runtime SetForwardingPipelineConfig
+[19:18:40.236] [bmv2] [D] [thread 4471] Set default default entry for table 'tbl_update_ttl': MyIngress.update_ttl - 
+[19:18:40.236] [bmv2] [D] [thread 4471] Set default default entry for table 'tbl_drop': MyIngress.drop - 
+[19:18:40.240] [bmv2] [D] [thread 4476] [0.0] [cxt 0] Processing packet received on port 1
+[19:18:40.240] [bmv2] [D] [thread 4476] [0.0] [cxt 0] Parser 'parser': start
+[19:18:40.240] [bmv2] [D] [thread 4476] [0.0] [cxt 0] Parser 'parser' entering state 'start'
+[19:18:40.240] [bmv2] [D] [thread 4476] [0.0] [cxt 0] Extracting header 'ethernet'
+[19:18:40.240] [bmv2] [D] [thread 4476] [0.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[19:18:40.240] [bmv2] [T] [thread 4476] [0.0] [cxt 0] Bytes parsed: 14
+[19:18:40.240] [bmv2] [D] [thread 4476] [0.0] [cxt 0] Parser 'parser': end
+[19:18:40.240] [bmv2] [D] [thread 4476] [0.0] [cxt 0] Pipeline 'ingress': start
+[19:18:40.240] [bmv2] [T] [thread 4476] [0.0] [cxt 0] source_routing.p4(133) Condition "hdr.srcRoutes[0].isValid()" (node_2) is false
+[19:18:40.240] [bmv2] [T] [thread 4476] [0.0] [cxt 0] Applying table 'tbl_drop'
+[19:18:40.240] [bmv2] [D] [thread 4476] [0.0] [cxt 0] Looking up key:
+
+[19:18:40.240] [bmv2] [D] [thread 4476] [0.0] [cxt 0] Table 'tbl_drop': miss
+[19:18:40.240] [bmv2] [D] [thread 4476] [0.0] [cxt 0] Action entry is MyIngress.drop - 
+[19:18:40.240] [bmv2] [T] [thread 4476] [0.0] [cxt 0] Action MyIngress.drop
+[19:18:40.240] [bmv2] [T] [thread 4476] [0.0] [cxt 0] source_routing.p4(113) Primitive mark_to_drop()
+[19:18:40.240] [bmv2] [D] [thread 4476] [0.0] [cxt 0] Pipeline 'ingress': end
+[19:18:40.240] [bmv2] [D] [thread 4476] [0.0] [cxt 0] Egress port is 511
+[19:18:40.240] [bmv2] [D] [thread 4476] [0.0] [cxt 0] Dropping packet at the end of ingress
+Connection removed
+[19:18:40.247] [bmv2] [D] [thread 4476] [1.0] [cxt 0] Processing packet received on port 2
+[19:18:40.247] [bmv2] [D] [thread 4476] [1.0] [cxt 0] Parser 'parser': start
+[19:18:40.247] [bmv2] [D] [thread 4476] [1.0] [cxt 0] Parser 'parser' entering state 'start'
+[19:18:40.247] [bmv2] [D] [thread 4476] [1.0] [cxt 0] Extracting header 'ethernet'
+[19:18:40.247] [bmv2] [D] [thread 4476] [1.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[19:18:40.247] [bmv2] [T] [thread 4476] [1.0] [cxt 0] Bytes parsed: 14
+[19:18:40.247] [bmv2] [D] [thread 4476] [1.0] [cxt 0] Parser 'parser': end
+[19:18:40.247] [bmv2] [D] [thread 4476] [1.0] [cxt 0] Pipeline 'ingress': start
+[19:18:40.247] [bmv2] [T] [thread 4476] [1.0] [cxt 0] source_routing.p4(133) Condition "hdr.srcRoutes[0].isValid()" (node_2) is false
+[19:18:40.247] [bmv2] [T] [thread 4476] [1.0] [cxt 0] Applying table 'tbl_drop'
+[19:18:40.247] [bmv2] [D] [thread 4476] [1.0] [cxt 0] Looking up key:
+
+[19:18:40.247] [bmv2] [D] [thread 4476] [1.0] [cxt 0] Table 'tbl_drop': miss
+[19:18:40.247] [bmv2] [D] [thread 4476] [1.0] [cxt 0] Action entry is MyIngress.drop - 
+[19:18:40.247] [bmv2] [T] [thread 4476] [1.0] [cxt 0] Action MyIngress.drop
+[19:18:40.247] [bmv2] [T] [thread 4476] [1.0] [cxt 0] source_routing.p4(113) Primitive mark_to_drop()
+[19:18:40.247] [bmv2] [D] [thread 4476] [1.0] [cxt 0] Pipeline 'ingress': end
+[19:18:40.247] [bmv2] [D] [thread 4476] [1.0] [cxt 0] Egress port is 511
+[19:18:40.247] [bmv2] [D] [thread 4476] [1.0] [cxt 0] Dropping packet at the end of ingress
+[19:18:40.247] [bmv2] [D] [thread 4476] [2.0] [cxt 0] Processing packet received on port 3
+[19:18:40.247] [bmv2] [D] [thread 4476] [2.0] [cxt 0] Parser 'parser': start
+[19:18:40.247] [bmv2] [D] [thread 4476] [2.0] [cxt 0] Parser 'parser' entering state 'start'
+[19:18:40.247] [bmv2] [D] [thread 4476] [2.0] [cxt 0] Extracting header 'ethernet'
+[19:18:40.247] [bmv2] [D] [thread 4476] [2.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[19:18:40.247] [bmv2] [T] [thread 4476] [2.0] [cxt 0] Bytes parsed: 14
+[19:18:40.247] [bmv2] [D] [thread 4476] [2.0] [cxt 0] Parser 'parser': end
+[19:18:40.247] [bmv2] [D] [thread 4476] [2.0] [cxt 0] Pipeline 'ingress': start
+[19:18:40.247] [bmv2] [T] [thread 4476] [2.0] [cxt 0] source_routing.p4(133) Condition "hdr.srcRoutes[0].isValid()" (node_2) is false
+[19:18:40.247] [bmv2] [T] [thread 4476] [2.0] [cxt 0] Applying table 'tbl_drop'
+[19:18:40.247] [bmv2] [D] [thread 4476] [2.0] [cxt 0] Looking up key:
+
+[19:18:40.247] [bmv2] [D] [thread 4476] [2.0] [cxt 0] Table 'tbl_drop': miss
+[19:18:40.247] [bmv2] [D] [thread 4476] [2.0] [cxt 0] Action entry is MyIngress.drop - 
+[19:18:40.247] [bmv2] [T] [thread 4476] [2.0] [cxt 0] Action MyIngress.drop
+[19:18:40.247] [bmv2] [T] [thread 4476] [2.0] [cxt 0] source_routing.p4(113) Primitive mark_to_drop()
+[19:18:40.247] [bmv2] [D] [thread 4476] [2.0] [cxt 0] Pipeline 'ingress': end
+[19:18:40.247] [bmv2] [D] [thread 4476] [2.0] [cxt 0] Egress port is 511
+[19:18:40.247] [bmv2] [D] [thread 4476] [2.0] [cxt 0] Dropping packet at the end of ingress
+[19:18:40.247] [bmv2] [D] [thread 4476] [3.0] [cxt 0] Processing packet received on port 2
+[19:18:40.247] [bmv2] [D] [thread 4476] [3.0] [cxt 0] Parser 'parser': start
+[19:18:40.247] [bmv2] [D] [thread 4476] [3.0] [cxt 0] Parser 'parser' entering state 'start'
+[19:18:40.247] [bmv2] [D] [thread 4476] [3.0] [cxt 0] Extracting header 'ethernet'
+[19:18:40.247] [bmv2] [D] [thread 4476] [3.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[19:18:40.247] [bmv2] [T] [thread 4476] [3.0] [cxt 0] Bytes parsed: 14
+[19:18:40.247] [bmv2] [D] [thread 4476] [3.0] [cxt 0] Parser 'parser': end
+[19:18:40.247] [bmv2] [D] [thread 4476] [3.0] [cxt 0] Pipeline 'ingress': start
+[19:18:40.247] [bmv2] [T] [thread 4476] [3.0] [cxt 0] source_routing.p4(133) Condition "hdr.srcRoutes[0].isValid()" (node_2) is false
+[19:18:40.247] [bmv2] [T] [thread 4476] [3.0] [cxt 0] Applying table 'tbl_drop'
+[19:18:40.247] [bmv2] [D] [thread 4476] [3.0] [cxt 0] Looking up key:
+
+[19:18:40.247] [bmv2] [D] [thread 4476] [3.0] [cxt 0] Table 'tbl_drop': miss
+[19:18:40.247] [bmv2] [D] [thread 4476] [3.0] [cxt 0] Action entry is MyIngress.drop - 
+[19:18:40.247] [bmv2] [T] [thread 4476] [3.0] [cxt 0] Action MyIngress.drop
+[19:18:40.247] [bmv2] [T] [thread 4476] [3.0] [cxt 0] source_routing.p4(113) Primitive mark_to_drop()
+[19:18:40.247] [bmv2] [D] [thread 4476] [3.0] [cxt 0] Pipeline 'ingress': end
+[19:18:40.247] [bmv2] [D] [thread 4476] [3.0] [cxt 0] Egress port is 511
+[19:18:40.247] [bmv2] [D] [thread 4476] [3.0] [cxt 0] Dropping packet at the end of ingress
+[19:18:40.247] [bmv2] [D] [thread 4476] [4.0] [cxt 0] Processing packet received on port 3
+[19:18:40.247] [bmv2] [D] [thread 4476] [4.0] [cxt 0] Parser 'parser': start
+[19:18:40.247] [bmv2] [D] [thread 4476] [4.0] [cxt 0] Parser 'parser' entering state 'start'
+[19:18:40.247] [bmv2] [D] [thread 4476] [4.0] [cxt 0] Extracting header 'ethernet'
+[19:18:40.247] [bmv2] [D] [thread 4476] [4.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[19:18:40.247] [bmv2] [T] [thread 4476] [4.0] [cxt 0] Bytes parsed: 14
+[19:18:40.247] [bmv2] [D] [thread 4476] [4.0] [cxt 0] Parser 'parser': end
+[19:18:40.247] [bmv2] [D] [thread 4476] [4.0] [cxt 0] Pipeline 'ingress': start
+[19:18:40.247] [bmv2] [T] [thread 4476] [4.0] [cxt 0] source_routing.p4(133) Condition "hdr.srcRoutes[0].isValid()" (node_2) is false
+[19:18:40.247] [bmv2] [T] [thread 4476] [4.0] [cxt 0] Applying table 'tbl_drop'
+[19:18:40.247] [bmv2] [D] [thread 4476] [4.0] [cxt 0] Looking up key:
+
+[19:18:40.247] [bmv2] [D] [thread 4476] [4.0] [cxt 0] Table 'tbl_drop': miss
+[19:18:40.247] [bmv2] [D] [thread 4476] [4.0] [cxt 0] Action entry is MyIngress.drop - 
+[19:18:40.247] [bmv2] [T] [thread 4476] [4.0] [cxt 0] Action MyIngress.drop
+[19:18:40.247] [bmv2] [T] [thread 4476] [4.0] [cxt 0] source_routing.p4(113) Primitive mark_to_drop()
+[19:18:40.247] [bmv2] [D] [thread 4476] [4.0] [cxt 0] Pipeline 'ingress': end
+[19:18:40.247] [bmv2] [D] [thread 4476] [4.0] [cxt 0] Egress port is 511
+[19:18:40.247] [bmv2] [D] [thread 4476] [4.0] [cxt 0] Dropping packet at the end of ingress
+[19:18:40.247] [bmv2] [D] [thread 4476] [5.0] [cxt 0] Processing packet received on port 2
+[19:18:40.247] [bmv2] [D] [thread 4476] [5.0] [cxt 0] Parser 'parser': start
+[19:18:40.247] [bmv2] [D] [thread 4476] [5.0] [cxt 0] Parser 'parser' entering state 'start'
+[19:18:40.247] [bmv2] [D] [thread 4476] [5.0] [cxt 0] Extracting header 'ethernet'
+[19:18:40.247] [bmv2] [D] [thread 4476] [5.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[19:18:40.247] [bmv2] [T] [thread 4476] [5.0] [cxt 0] Bytes parsed: 14
+[19:18:40.247] [bmv2] [D] [thread 4476] [5.0] [cxt 0] Parser 'parser': end
+[19:18:40.247] [bmv2] [D] [thread 4476] [5.0] [cxt 0] Pipeline 'ingress': start
+[19:18:40.247] [bmv2] [T] [thread 4476] [5.0] [cxt 0] source_routing.p4(133) Condition "hdr.srcRoutes[0].isValid()" (node_2) is false
+[19:18:40.247] [bmv2] [T] [thread 4476] [5.0] [cxt 0] Applying table 'tbl_drop'
+[19:18:40.247] [bmv2] [D] [thread 4476] [5.0] [cxt 0] Looking up key:
+
+[19:18:40.247] [bmv2] [D] [thread 4476] [5.0] [cxt 0] Table 'tbl_drop': miss
+[19:18:40.247] [bmv2] [D] [thread 4476] [5.0] [cxt 0] Action entry is MyIngress.drop - 
+[19:18:40.247] [bmv2] [T] [thread 4476] [5.0] [cxt 0] Action MyIngress.drop
+[19:18:40.247] [bmv2] [T] [thread 4476] [5.0] [cxt 0] source_routing.p4(113) Primitive mark_to_drop()
+[19:18:40.247] [bmv2] [D] [thread 4476] [5.0] [cxt 0] Pipeline 'ingress': end
+[19:18:40.247] [bmv2] [D] [thread 4476] [5.0] [cxt 0] Egress port is 511
+[19:18:40.247] [bmv2] [D] [thread 4476] [5.0] [cxt 0] Dropping packet at the end of ingress
+[19:18:40.248] [bmv2] [D] [thread 4476] [6.0] [cxt 0] Processing packet received on port 3
+[19:18:40.248] [bmv2] [D] [thread 4476] [6.0] [cxt 0] Parser 'parser': start
+[19:18:40.248] [bmv2] [D] [thread 4476] [6.0] [cxt 0] Parser 'parser' entering state 'start'
+[19:18:40.248] [bmv2] [D] [thread 4476] [6.0] [cxt 0] Extracting header 'ethernet'
+[19:18:40.248] [bmv2] [D] [thread 4476] [6.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[19:18:40.248] [bmv2] [T] [thread 4476] [6.0] [cxt 0] Bytes parsed: 14
+[19:18:40.248] [bmv2] [D] [thread 4476] [6.0] [cxt 0] Parser 'parser': end
+[19:18:40.248] [bmv2] [D] [thread 4476] [6.0] [cxt 0] Pipeline 'ingress': start
+[19:18:40.248] [bmv2] [T] [thread 4476] [6.0] [cxt 0] source_routing.p4(133) Condition "hdr.srcRoutes[0].isValid()" (node_2) is false
+[19:18:40.248] [bmv2] [T] [thread 4476] [6.0] [cxt 0] Applying table 'tbl_drop'
+[19:18:40.248] [bmv2] [D] [thread 4476] [6.0] [cxt 0] Looking up key:
+
+[19:18:40.248] [bmv2] [D] [thread 4476] [6.0] [cxt 0] Table 'tbl_drop': miss
+[19:18:40.248] [bmv2] [D] [thread 4476] [6.0] [cxt 0] Action entry is MyIngress.drop - 
+[19:18:40.248] [bmv2] [T] [thread 4476] [6.0] [cxt 0] Action MyIngress.drop
+[19:18:40.248] [bmv2] [T] [thread 4476] [6.0] [cxt 0] source_routing.p4(113) Primitive mark_to_drop()
+[19:18:40.248] [bmv2] [D] [thread 4476] [6.0] [cxt 0] Pipeline 'ingress': end
+[19:18:40.248] [bmv2] [D] [thread 4476] [6.0] [cxt 0] Egress port is 511
+[19:18:40.248] [bmv2] [D] [thread 4476] [6.0] [cxt 0] Dropping packet at the end of ingress
+[19:18:40.248] [bmv2] [D] [thread 4476] [7.0] [cxt 0] Processing packet received on port 2
+[19:18:40.248] [bmv2] [D] [thread 4476] [7.0] [cxt 0] Parser 'parser': start
+[19:18:40.248] [bmv2] [D] [thread 4476] [7.0] [cxt 0] Parser 'parser' entering state 'start'
+[19:18:40.248] [bmv2] [D] [thread 4476] [7.0] [cxt 0] Extracting header 'ethernet'
+[19:18:40.248] [bmv2] [D] [thread 4476] [7.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[19:18:40.248] [bmv2] [T] [thread 4476] [7.0] [cxt 0] Bytes parsed: 14
+[19:18:40.248] [bmv2] [D] [thread 4476] [7.0] [cxt 0] Parser 'parser': end
+[19:18:40.248] [bmv2] [D] [thread 4476] [7.0] [cxt 0] Pipeline 'ingress': start
+[19:18:40.248] [bmv2] [T] [thread 4476] [7.0] [cxt 0] source_routing.p4(133) Condition "hdr.srcRoutes[0].isValid()" (node_2) is false
+[19:18:40.248] [bmv2] [T] [thread 4476] [7.0] [cxt 0] Applying table 'tbl_drop'
+[19:18:40.248] [bmv2] [D] [thread 4476] [7.0] [cxt 0] Looking up key:
+
+[19:18:40.248] [bmv2] [D] [thread 4476] [7.0] [cxt 0] Table 'tbl_drop': miss
+[19:18:40.248] [bmv2] [D] [thread 4476] [7.0] [cxt 0] Action entry is MyIngress.drop - 
+[19:18:40.248] [bmv2] [T] [thread 4476] [7.0] [cxt 0] Action MyIngress.drop
+[19:18:40.248] [bmv2] [T] [thread 4476] [7.0] [cxt 0] source_routing.p4(113) Primitive mark_to_drop()
+[19:18:40.248] [bmv2] [D] [thread 4476] [7.0] [cxt 0] Pipeline 'ingress': end
+[19:18:40.248] [bmv2] [D] [thread 4476] [7.0] [cxt 0] Egress port is 511
+[19:18:40.248] [bmv2] [D] [thread 4476] [7.0] [cxt 0] Dropping packet at the end of ingress
+[19:18:40.248] [bmv2] [D] [thread 4476] [8.0] [cxt 0] Processing packet received on port 3
+[19:18:40.248] [bmv2] [D] [thread 4476] [8.0] [cxt 0] Parser 'parser': start
+[19:18:40.248] [bmv2] [D] [thread 4476] [8.0] [cxt 0] Parser 'parser' entering state 'start'
+[19:18:40.248] [bmv2] [D] [thread 4476] [8.0] [cxt 0] Extracting header 'ethernet'
+[19:18:40.248] [bmv2] [D] [thread 4476] [8.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[19:18:40.248] [bmv2] [T] [thread 4476] [8.0] [cxt 0] Bytes parsed: 14
+[19:18:40.248] [bmv2] [D] [thread 4476] [8.0] [cxt 0] Parser 'parser': end
+[19:18:40.248] [bmv2] [D] [thread 4476] [8.0] [cxt 0] Pipeline 'ingress': start
+[19:18:40.248] [bmv2] [T] [thread 4476] [8.0] [cxt 0] source_routing.p4(133) Condition "hdr.srcRoutes[0].isValid()" (node_2) is false
+[19:18:40.248] [bmv2] [T] [thread 4476] [8.0] [cxt 0] Applying table 'tbl_drop'
+[19:18:40.248] [bmv2] [D] [thread 4476] [8.0] [cxt 0] Looking up key:
+
+[19:18:40.248] [bmv2] [D] [thread 4476] [8.0] [cxt 0] Table 'tbl_drop': miss
+[19:18:40.248] [bmv2] [D] [thread 4476] [8.0] [cxt 0] Action entry is MyIngress.drop - 
+[19:18:40.248] [bmv2] [T] [thread 4476] [8.0] [cxt 0] Action MyIngress.drop
+[19:18:40.248] [bmv2] [T] [thread 4476] [8.0] [cxt 0] source_routing.p4(113) Primitive mark_to_drop()
+[19:18:40.248] [bmv2] [D] [thread 4476] [8.0] [cxt 0] Pipeline 'ingress': end
+[19:18:40.248] [bmv2] [D] [thread 4476] [8.0] [cxt 0] Egress port is 511
+[19:18:40.248] [bmv2] [D] [thread 4476] [8.0] [cxt 0] Dropping packet at the end of ingress
+[19:18:40.248] [bmv2] [D] [thread 4476] [9.0] [cxt 0] Processing packet received on port 2
+[19:18:40.248] [bmv2] [D] [thread 4476] [9.0] [cxt 0] Parser 'parser': start
+[19:18:40.248] [bmv2] [D] [thread 4476] [9.0] [cxt 0] Parser 'parser' entering state 'start'
+[19:18:40.248] [bmv2] [D] [thread 4476] [9.0] [cxt 0] Extracting header 'ethernet'
+[19:18:40.248] [bmv2] [D] [thread 4476] [9.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[19:18:40.248] [bmv2] [T] [thread 4476] [9.0] [cxt 0] Bytes parsed: 14
+[19:18:40.248] [bmv2] [D] [thread 4476] [9.0] [cxt 0] Parser 'parser': end
+[19:18:40.248] [bmv2] [D] [thread 4476] [9.0] [cxt 0] Pipeline 'ingress': start
+[19:18:40.248] [bmv2] [T] [thread 4476] [9.0] [cxt 0] source_routing.p4(133) Condition "hdr.srcRoutes[0].isValid()" (node_2) is false
+[19:18:40.248] [bmv2] [T] [thread 4476] [9.0] [cxt 0] Applying table 'tbl_drop'
+[19:18:40.248] [bmv2] [D] [thread 4476] [9.0] [cxt 0] Looking up key:
+
+[19:18:40.248] [bmv2] [D] [thread 4476] [9.0] [cxt 0] Table 'tbl_drop': miss
+[19:18:40.248] [bmv2] [D] [thread 4476] [9.0] [cxt 0] Action entry is MyIngress.drop - 
+[19:18:40.248] [bmv2] [T] [thread 4476] [9.0] [cxt 0] Action MyIngress.drop
+[19:18:40.248] [bmv2] [T] [thread 4476] [9.0] [cxt 0] source_routing.p4(113) Primitive mark_to_drop()
+[19:18:40.248] [bmv2] [D] [thread 4476] [9.0] [cxt 0] Pipeline 'ingress': end
+[19:18:40.248] [bmv2] [D] [thread 4476] [9.0] [cxt 0] Egress port is 511
+[19:18:40.248] [bmv2] [D] [thread 4476] [9.0] [cxt 0] Dropping packet at the end of ingress
+[19:18:40.248] [bmv2] [D] [thread 4476] [10.0] [cxt 0] Processing packet received on port 3
+[19:18:40.248] [bmv2] [D] [thread 4476] [10.0] [cxt 0] Parser 'parser': start
+[19:18:40.248] [bmv2] [D] [thread 4476] [10.0] [cxt 0] Parser 'parser' entering state 'start'
+[19:18:40.248] [bmv2] [D] [thread 4476] [10.0] [cxt 0] Extracting header 'ethernet'
+[19:18:40.248] [bmv2] [D] [thread 4476] [10.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[19:18:40.248] [bmv2] [T] [thread 4476] [10.0] [cxt 0] Bytes parsed: 14
+[19:18:40.248] [bmv2] [D] [thread 4476] [10.0] [cxt 0] Parser 'parser': end
+[19:18:40.248] [bmv2] [D] [thread 4476] [10.0] [cxt 0] Pipeline 'ingress': start
+[19:18:40.248] [bmv2] [T] [thread 4476] [10.0] [cxt 0] source_routing.p4(133) Condition "hdr.srcRoutes[0].isValid()" (node_2) is false
+[19:18:40.248] [bmv2] [T] [thread 4476] [10.0] [cxt 0] Applying table 'tbl_drop'
+[19:18:40.248] [bmv2] [D] [thread 4476] [10.0] [cxt 0] Looking up key:
+
+[19:18:40.248] [bmv2] [D] [thread 4476] [10.0] [cxt 0] Table 'tbl_drop': miss
+[19:18:40.248] [bmv2] [D] [thread 4476] [10.0] [cxt 0] Action entry is MyIngress.drop - 
+[19:18:40.248] [bmv2] [T] [thread 4476] [10.0] [cxt 0] Action MyIngress.drop
+[19:18:40.248] [bmv2] [T] [thread 4476] [10.0] [cxt 0] source_routing.p4(113) Primitive mark_to_drop()
+[19:18:40.248] [bmv2] [D] [thread 4476] [10.0] [cxt 0] Pipeline 'ingress': end
+[19:18:40.248] [bmv2] [D] [thread 4476] [10.0] [cxt 0] Egress port is 511
+[19:18:40.248] [bmv2] [D] [thread 4476] [10.0] [cxt 0] Dropping packet at the end of ingress
+[19:18:40.248] [bmv2] [D] [thread 4476] [11.0] [cxt 0] Processing packet received on port 2
+[19:18:40.248] [bmv2] [D] [thread 4476] [11.0] [cxt 0] Parser 'parser': start
+[19:18:40.248] [bmv2] [D] [thread 4476] [11.0] [cxt 0] Parser 'parser' entering state 'start'
+[19:18:40.248] [bmv2] [D] [thread 4476] [11.0] [cxt 0] Extracting header 'ethernet'
+[19:18:40.248] [bmv2] [D] [thread 4476] [11.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[19:18:40.248] [bmv2] [T] [thread 4476] [11.0] [cxt 0] Bytes parsed: 14
+[19:18:40.248] [bmv2] [D] [thread 4476] [11.0] [cxt 0] Parser 'parser': end
+[19:18:40.248] [bmv2] [D] [thread 4476] [11.0] [cxt 0] Pipeline 'ingress': start
+[19:18:40.248] [bmv2] [T] [thread 4476] [11.0] [cxt 0] source_routing.p4(133) Condition "hdr.srcRoutes[0].isValid()" (node_2) is false
+[19:18:40.248] [bmv2] [T] [thread 4476] [11.0] [cxt 0] Applying table 'tbl_drop'
+[19:18:40.248] [bmv2] [D] [thread 4476] [11.0] [cxt 0] Looking up key:
+
+[19:18:40.248] [bmv2] [D] [thread 4476] [11.0] [cxt 0] Table 'tbl_drop': miss
+[19:18:40.248] [bmv2] [D] [thread 4476] [11.0] [cxt 0] Action entry is MyIngress.drop - 
+[19:18:40.248] [bmv2] [T] [thread 4476] [11.0] [cxt 0] Action MyIngress.drop
+[19:18:40.248] [bmv2] [T] [thread 4476] [11.0] [cxt 0] source_routing.p4(113) Primitive mark_to_drop()
+[19:18:40.248] [bmv2] [D] [thread 4476] [11.0] [cxt 0] Pipeline 'ingress': end
+[19:18:40.248] [bmv2] [D] [thread 4476] [11.0] [cxt 0] Egress port is 511
+[19:18:40.248] [bmv2] [D] [thread 4476] [11.0] [cxt 0] Dropping packet at the end of ingress
+[19:18:40.249] [bmv2] [D] [thread 4476] [12.0] [cxt 0] Processing packet received on port 3
+[19:18:40.249] [bmv2] [D] [thread 4476] [12.0] [cxt 0] Parser 'parser': start
+[19:18:40.249] [bmv2] [D] [thread 4476] [12.0] [cxt 0] Parser 'parser' entering state 'start'
+[19:18:40.249] [bmv2] [D] [thread 4476] [12.0] [cxt 0] Extracting header 'ethernet'
+[19:18:40.249] [bmv2] [D] [thread 4476] [12.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[19:18:40.249] [bmv2] [T] [thread 4476] [12.0] [cxt 0] Bytes parsed: 14
+[19:18:40.249] [bmv2] [D] [thread 4476] [12.0] [cxt 0] Parser 'parser': end
+[19:18:40.249] [bmv2] [D] [thread 4476] [12.0] [cxt 0] Pipeline 'ingress': start
+[19:18:40.249] [bmv2] [T] [thread 4476] [12.0] [cxt 0] source_routing.p4(133) Condition "hdr.srcRoutes[0].isValid()" (node_2) is false
+[19:18:40.249] [bmv2] [T] [thread 4476] [12.0] [cxt 0] Applying table 'tbl_drop'
+[19:18:40.249] [bmv2] [D] [thread 4476] [12.0] [cxt 0] Looking up key:
+
+[19:18:40.249] [bmv2] [D] [thread 4476] [12.0] [cxt 0] Table 'tbl_drop': miss
+[19:18:40.249] [bmv2] [D] [thread 4476] [12.0] [cxt 0] Action entry is MyIngress.drop - 
+[19:18:40.249] [bmv2] [T] [thread 4476] [12.0] [cxt 0] Action MyIngress.drop
+[19:18:40.249] [bmv2] [T] [thread 4476] [12.0] [cxt 0] source_routing.p4(113) Primitive mark_to_drop()
+[19:18:40.249] [bmv2] [D] [thread 4476] [12.0] [cxt 0] Pipeline 'ingress': end
+[19:18:40.249] [bmv2] [D] [thread 4476] [12.0] [cxt 0] Egress port is 511
+[19:18:40.249] [bmv2] [D] [thread 4476] [12.0] [cxt 0] Dropping packet at the end of ingress
+[19:18:40.249] [bmv2] [D] [thread 4476] [13.0] [cxt 0] Processing packet received on port 2
+[19:18:40.249] [bmv2] [D] [thread 4476] [13.0] [cxt 0] Parser 'parser': start
+[19:18:40.249] [bmv2] [D] [thread 4476] [13.0] [cxt 0] Parser 'parser' entering state 'start'
+[19:18:40.249] [bmv2] [D] [thread 4476] [13.0] [cxt 0] Extracting header 'ethernet'
+[19:18:40.249] [bmv2] [D] [thread 4476] [13.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[19:18:40.249] [bmv2] [T] [thread 4476] [13.0] [cxt 0] Bytes parsed: 14
+[19:18:40.249] [bmv2] [D] [thread 4476] [13.0] [cxt 0] Parser 'parser': end
+[19:18:40.249] [bmv2] [D] [thread 4476] [13.0] [cxt 0] Pipeline 'ingress': start
+[19:18:40.249] [bmv2] [T] [thread 4476] [13.0] [cxt 0] source_routing.p4(133) Condition "hdr.srcRoutes[0].isValid()" (node_2) is false
+[19:18:40.249] [bmv2] [T] [thread 4476] [13.0] [cxt 0] Applying table 'tbl_drop'
+[19:18:40.249] [bmv2] [D] [thread 4476] [13.0] [cxt 0] Looking up key:
+
+[19:18:40.249] [bmv2] [D] [thread 4476] [13.0] [cxt 0] Table 'tbl_drop': miss
+[19:18:40.249] [bmv2] [D] [thread 4476] [13.0] [cxt 0] Action entry is MyIngress.drop - 
+[19:18:40.249] [bmv2] [T] [thread 4476] [13.0] [cxt 0] Action MyIngress.drop
+[19:18:40.249] [bmv2] [T] [thread 4476] [13.0] [cxt 0] source_routing.p4(113) Primitive mark_to_drop()
+[19:18:40.249] [bmv2] [D] [thread 4476] [13.0] [cxt 0] Pipeline 'ingress': end
+[19:18:40.249] [bmv2] [D] [thread 4476] [13.0] [cxt 0] Egress port is 511
+[19:18:40.249] [bmv2] [D] [thread 4476] [13.0] [cxt 0] Dropping packet at the end of ingress
+[19:18:40.249] [bmv2] [D] [thread 4476] [14.0] [cxt 0] Processing packet received on port 3
+[19:18:40.249] [bmv2] [D] [thread 4476] [14.0] [cxt 0] Parser 'parser': start
+[19:18:40.249] [bmv2] [D] [thread 4476] [14.0] [cxt 0] Parser 'parser' entering state 'start'
+[19:18:40.249] [bmv2] [D] [thread 4476] [14.0] [cxt 0] Extracting header 'ethernet'
+[19:18:40.249] [bmv2] [D] [thread 4476] [14.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[19:18:40.249] [bmv2] [T] [thread 4476] [14.0] [cxt 0] Bytes parsed: 14
+[19:18:40.249] [bmv2] [D] [thread 4476] [14.0] [cxt 0] Parser 'parser': end
+[19:18:40.249] [bmv2] [D] [thread 4476] [14.0] [cxt 0] Pipeline 'ingress': start
+[19:18:40.249] [bmv2] [T] [thread 4476] [14.0] [cxt 0] source_routing.p4(133) Condition "hdr.srcRoutes[0].isValid()" (node_2) is false
+[19:18:40.249] [bmv2] [T] [thread 4476] [14.0] [cxt 0] Applying table 'tbl_drop'
+[19:18:40.249] [bmv2] [D] [thread 4476] [14.0] [cxt 0] Looking up key:
+
+[19:18:40.249] [bmv2] [D] [thread 4476] [14.0] [cxt 0] Table 'tbl_drop': miss
+[19:18:40.249] [bmv2] [D] [thread 4476] [14.0] [cxt 0] Action entry is MyIngress.drop - 
+[19:18:40.249] [bmv2] [T] [thread 4476] [14.0] [cxt 0] Action MyIngress.drop
+[19:18:40.249] [bmv2] [T] [thread 4476] [14.0] [cxt 0] source_routing.p4(113) Primitive mark_to_drop()
+[19:18:40.249] [bmv2] [D] [thread 4476] [14.0] [cxt 0] Pipeline 'ingress': end
+[19:18:40.249] [bmv2] [D] [thread 4476] [14.0] [cxt 0] Egress port is 511
+[19:18:40.249] [bmv2] [D] [thread 4476] [14.0] [cxt 0] Dropping packet at the end of ingress
+[19:18:40.387] [bmv2] [D] [thread 4476] [15.0] [cxt 0] Processing packet received on port 1
+[19:18:40.387] [bmv2] [D] [thread 4476] [15.0] [cxt 0] Parser 'parser': start
+[19:18:40.387] [bmv2] [D] [thread 4476] [15.0] [cxt 0] Parser 'parser' entering state 'start'
+[19:18:40.387] [bmv2] [D] [thread 4476] [15.0] [cxt 0] Extracting header 'ethernet'
+[19:18:40.387] [bmv2] [D] [thread 4476] [15.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[19:18:40.387] [bmv2] [T] [thread 4476] [15.0] [cxt 0] Bytes parsed: 14
+[19:18:40.387] [bmv2] [D] [thread 4476] [15.0] [cxt 0] Parser 'parser': end
+[19:18:40.387] [bmv2] [D] [thread 4476] [15.0] [cxt 0] Pipeline 'ingress': start
+[19:18:40.387] [bmv2] [T] [thread 4476] [15.0] [cxt 0] source_routing.p4(133) Condition "hdr.srcRoutes[0].isValid()" (node_2) is false
+[19:18:40.387] [bmv2] [T] [thread 4476] [15.0] [cxt 0] Applying table 'tbl_drop'
+[19:18:40.387] [bmv2] [D] [thread 4476] [15.0] [cxt 0] Looking up key:
+
+[19:18:40.387] [bmv2] [D] [thread 4476] [15.0] [cxt 0] Table 'tbl_drop': miss
+[19:18:40.387] [bmv2] [D] [thread 4476] [15.0] [cxt 0] Action entry is MyIngress.drop - 
+[19:18:40.387] [bmv2] [T] [thread 4476] [15.0] [cxt 0] Action MyIngress.drop
+[19:18:40.387] [bmv2] [T] [thread 4476] [15.0] [cxt 0] source_routing.p4(113) Primitive mark_to_drop()
+[19:18:40.387] [bmv2] [D] [thread 4476] [15.0] [cxt 0] Pipeline 'ingress': end
+[19:18:40.387] [bmv2] [D] [thread 4476] [15.0] [cxt 0] Egress port is 511
+[19:18:40.387] [bmv2] [D] [thread 4476] [15.0] [cxt 0] Dropping packet at the end of ingress
+[19:18:40.537] [bmv2] [D] [thread 4476] [16.0] [cxt 0] Processing packet received on port 2
+[19:18:40.537] [bmv2] [D] [thread 4476] [16.0] [cxt 0] Parser 'parser': start
+[19:18:40.537] [bmv2] [D] [thread 4476] [16.0] [cxt 0] Parser 'parser' entering state 'start'
+[19:18:40.537] [bmv2] [D] [thread 4476] [16.0] [cxt 0] Extracting header 'ethernet'
+[19:18:40.537] [bmv2] [D] [thread 4476] [16.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[19:18:40.537] [bmv2] [T] [thread 4476] [16.0] [cxt 0] Bytes parsed: 14
+[19:18:40.537] [bmv2] [D] [thread 4476] [16.0] [cxt 0] Parser 'parser': end
+[19:18:40.537] [bmv2] [D] [thread 4476] [16.0] [cxt 0] Pipeline 'ingress': start
+[19:18:40.537] [bmv2] [T] [thread 4476] [16.0] [cxt 0] source_routing.p4(133) Condition "hdr.srcRoutes[0].isValid()" (node_2) is false
+[19:18:40.537] [bmv2] [T] [thread 4476] [16.0] [cxt 0] Applying table 'tbl_drop'
+[19:18:40.537] [bmv2] [D] [thread 4476] [16.0] [cxt 0] Looking up key:
+
+[19:18:40.537] [bmv2] [D] [thread 4476] [16.0] [cxt 0] Table 'tbl_drop': miss
+[19:18:40.537] [bmv2] [D] [thread 4476] [16.0] [cxt 0] Action entry is MyIngress.drop - 
+[19:18:40.537] [bmv2] [T] [thread 4476] [16.0] [cxt 0] Action MyIngress.drop
+[19:18:40.537] [bmv2] [T] [thread 4476] [16.0] [cxt 0] source_routing.p4(113) Primitive mark_to_drop()
+[19:18:40.537] [bmv2] [D] [thread 4476] [16.0] [cxt 0] Pipeline 'ingress': end
+[19:18:40.537] [bmv2] [D] [thread 4476] [16.0] [cxt 0] Egress port is 511
+[19:18:40.537] [bmv2] [D] [thread 4476] [16.0] [cxt 0] Dropping packet at the end of ingress
+[19:18:40.733] [bmv2] [D] [thread 4476] [17.0] [cxt 0] Processing packet received on port 2
+[19:18:40.733] [bmv2] [D] [thread 4476] [17.0] [cxt 0] Parser 'parser': start
+[19:18:40.733] [bmv2] [D] [thread 4476] [17.0] [cxt 0] Parser 'parser' entering state 'start'
+[19:18:40.733] [bmv2] [D] [thread 4476] [17.0] [cxt 0] Extracting header 'ethernet'
+[19:18:40.733] [bmv2] [D] [thread 4476] [17.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[19:18:40.733] [bmv2] [T] [thread 4476] [17.0] [cxt 0] Bytes parsed: 14
+[19:18:40.733] [bmv2] [D] [thread 4476] [17.0] [cxt 0] Parser 'parser': end
+[19:18:40.733] [bmv2] [D] [thread 4476] [17.0] [cxt 0] Pipeline 'ingress': start
+[19:18:40.733] [bmv2] [T] [thread 4476] [17.0] [cxt 0] source_routing.p4(133) Condition "hdr.srcRoutes[0].isValid()" (node_2) is false
+[19:18:40.733] [bmv2] [T] [thread 4476] [17.0] [cxt 0] Applying table 'tbl_drop'
+[19:18:40.733] [bmv2] [D] [thread 4476] [17.0] [cxt 0] Looking up key:
+
+[19:18:40.733] [bmv2] [D] [thread 4476] [17.0] [cxt 0] Table 'tbl_drop': miss
+[19:18:40.733] [bmv2] [D] [thread 4476] [17.0] [cxt 0] Action entry is MyIngress.drop - 
+[19:18:40.733] [bmv2] [T] [thread 4476] [17.0] [cxt 0] Action MyIngress.drop
+[19:18:40.733] [bmv2] [T] [thread 4476] [17.0] [cxt 0] source_routing.p4(113) Primitive mark_to_drop()
+[19:18:40.733] [bmv2] [D] [thread 4476] [17.0] [cxt 0] Pipeline 'ingress': end
+[19:18:40.733] [bmv2] [D] [thread 4476] [17.0] [cxt 0] Egress port is 511
+[19:18:40.733] [bmv2] [D] [thread 4476] [17.0] [cxt 0] Dropping packet at the end of ingress
+[19:18:41.160] [bmv2] [D] [thread 4476] [18.0] [cxt 0] Processing packet received on port 3
+[19:18:41.160] [bmv2] [D] [thread 4476] [18.0] [cxt 0] Parser 'parser': start
+[19:18:41.160] [bmv2] [D] [thread 4476] [18.0] [cxt 0] Parser 'parser' entering state 'start'
+[19:18:41.160] [bmv2] [D] [thread 4476] [18.0] [cxt 0] Extracting header 'ethernet'
+[19:18:41.160] [bmv2] [D] [thread 4476] [18.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[19:18:41.160] [bmv2] [T] [thread 4476] [18.0] [cxt 0] Bytes parsed: 14
+[19:18:41.160] [bmv2] [D] [thread 4476] [18.0] [cxt 0] Parser 'parser': end
+[19:18:41.160] [bmv2] [D] [thread 4476] [18.0] [cxt 0] Pipeline 'ingress': start
+[19:18:41.160] [bmv2] [T] [thread 4476] [18.0] [cxt 0] source_routing.p4(133) Condition "hdr.srcRoutes[0].isValid()" (node_2) is false
+[19:18:41.160] [bmv2] [T] [thread 4476] [18.0] [cxt 0] Applying table 'tbl_drop'
+[19:18:41.160] [bmv2] [D] [thread 4476] [18.0] [cxt 0] Looking up key:
+
+[19:18:41.160] [bmv2] [D] [thread 4476] [18.0] [cxt 0] Table 'tbl_drop': miss
+[19:18:41.160] [bmv2] [D] [thread 4476] [18.0] [cxt 0] Action entry is MyIngress.drop - 
+[19:18:41.160] [bmv2] [T] [thread 4476] [18.0] [cxt 0] Action MyIngress.drop
+[19:18:41.160] [bmv2] [T] [thread 4476] [18.0] [cxt 0] source_routing.p4(113) Primitive mark_to_drop()
+[19:18:41.160] [bmv2] [D] [thread 4476] [18.0] [cxt 0] Pipeline 'ingress': end
+[19:18:41.160] [bmv2] [D] [thread 4476] [18.0] [cxt 0] Egress port is 511
+[19:18:41.160] [bmv2] [D] [thread 4476] [18.0] [cxt 0] Dropping packet at the end of ingress
+[19:18:41.196] [bmv2] [D] [thread 4476] [19.0] [cxt 0] Processing packet received on port 3
+[19:18:41.196] [bmv2] [D] [thread 4476] [19.0] [cxt 0] Parser 'parser': start
+[19:18:41.196] [bmv2] [D] [thread 4476] [19.0] [cxt 0] Parser 'parser' entering state 'start'
+[19:18:41.196] [bmv2] [D] [thread 4476] [19.0] [cxt 0] Extracting header 'ethernet'
+[19:18:41.196] [bmv2] [D] [thread 4476] [19.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[19:18:41.196] [bmv2] [T] [thread 4476] [19.0] [cxt 0] Bytes parsed: 14
+[19:18:41.196] [bmv2] [D] [thread 4476] [19.0] [cxt 0] Parser 'parser': end
+[19:18:41.196] [bmv2] [D] [thread 4476] [19.0] [cxt 0] Pipeline 'ingress': start
+[19:18:41.196] [bmv2] [T] [thread 4476] [19.0] [cxt 0] source_routing.p4(133) Condition "hdr.srcRoutes[0].isValid()" (node_2) is false
+[19:18:41.196] [bmv2] [T] [thread 4476] [19.0] [cxt 0] Applying table 'tbl_drop'
+[19:18:41.196] [bmv2] [D] [thread 4476] [19.0] [cxt 0] Looking up key:
+
+[19:18:41.196] [bmv2] [D] [thread 4476] [19.0] [cxt 0] Table 'tbl_drop': miss
+[19:18:41.196] [bmv2] [D] [thread 4476] [19.0] [cxt 0] Action entry is MyIngress.drop - 
+[19:18:41.196] [bmv2] [T] [thread 4476] [19.0] [cxt 0] Action MyIngress.drop
+[19:18:41.196] [bmv2] [T] [thread 4476] [19.0] [cxt 0] source_routing.p4(113) Primitive mark_to_drop()
+[19:18:41.196] [bmv2] [D] [thread 4476] [19.0] [cxt 0] Pipeline 'ingress': end
+[19:18:41.196] [bmv2] [D] [thread 4476] [19.0] [cxt 0] Egress port is 511
+[19:18:41.196] [bmv2] [D] [thread 4476] [19.0] [cxt 0] Dropping packet at the end of ingress
+[19:18:41.516] [bmv2] [D] [thread 4476] [20.0] [cxt 0] Processing packet received on port 2
+[19:18:41.516] [bmv2] [D] [thread 4476] [20.0] [cxt 0] Parser 'parser': start
+[19:18:41.516] [bmv2] [D] [thread 4476] [20.0] [cxt 0] Parser 'parser' entering state 'start'
+[19:18:41.516] [bmv2] [D] [thread 4476] [20.0] [cxt 0] Extracting header 'ethernet'
+[19:18:41.516] [bmv2] [D] [thread 4476] [20.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[19:18:41.516] [bmv2] [T] [thread 4476] [20.0] [cxt 0] Bytes parsed: 14
+[19:18:41.516] [bmv2] [D] [thread 4476] [20.0] [cxt 0] Parser 'parser': end
+[19:18:41.516] [bmv2] [D] [thread 4476] [20.0] [cxt 0] Pipeline 'ingress': start
+[19:18:41.516] [bmv2] [T] [thread 4476] [20.0] [cxt 0] source_routing.p4(133) Condition "hdr.srcRoutes[0].isValid()" (node_2) is false
+[19:18:41.516] [bmv2] [T] [thread 4476] [20.0] [cxt 0] Applying table 'tbl_drop'
+[19:18:41.517] [bmv2] [D] [thread 4476] [20.0] [cxt 0] Looking up key:
+
+[19:18:41.517] [bmv2] [D] [thread 4476] [20.0] [cxt 0] Table 'tbl_drop': miss
+[19:18:41.517] [bmv2] [D] [thread 4476] [20.0] [cxt 0] Action entry is MyIngress.drop - 
+[19:18:41.517] [bmv2] [T] [thread 4476] [20.0] [cxt 0] Action MyIngress.drop
+[19:18:41.517] [bmv2] [T] [thread 4476] [20.0] [cxt 0] source_routing.p4(113) Primitive mark_to_drop()
+[19:18:41.517] [bmv2] [D] [thread 4476] [20.0] [cxt 0] Pipeline 'ingress': end
+[19:18:41.517] [bmv2] [D] [thread 4476] [20.0] [cxt 0] Egress port is 511
+[19:18:41.517] [bmv2] [D] [thread 4476] [20.0] [cxt 0] Dropping packet at the end of ingress
+[19:18:42.135] [bmv2] [D] [thread 4476] [21.0] [cxt 0] Processing packet received on port 3
+[19:18:42.135] [bmv2] [D] [thread 4476] [21.0] [cxt 0] Parser 'parser': start
+[19:18:42.135] [bmv2] [D] [thread 4476] [21.0] [cxt 0] Parser 'parser' entering state 'start'
+[19:18:42.135] [bmv2] [D] [thread 4476] [21.0] [cxt 0] Extracting header 'ethernet'
+[19:18:42.135] [bmv2] [D] [thread 4476] [21.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[19:18:42.135] [bmv2] [T] [thread 4476] [21.0] [cxt 0] Bytes parsed: 14
+[19:18:42.135] [bmv2] [D] [thread 4476] [21.0] [cxt 0] Parser 'parser': end
+[19:18:42.135] [bmv2] [D] [thread 4476] [21.0] [cxt 0] Pipeline 'ingress': start
+[19:18:42.136] [bmv2] [T] [thread 4476] [21.0] [cxt 0] source_routing.p4(133) Condition "hdr.srcRoutes[0].isValid()" (node_2) is false
+[19:18:42.136] [bmv2] [T] [thread 4476] [21.0] [cxt 0] Applying table 'tbl_drop'
+[19:18:42.136] [bmv2] [D] [thread 4476] [21.0] [cxt 0] Looking up key:
+
+[19:18:42.136] [bmv2] [D] [thread 4476] [21.0] [cxt 0] Table 'tbl_drop': miss
+[19:18:42.136] [bmv2] [D] [thread 4476] [21.0] [cxt 0] Action entry is MyIngress.drop - 
+[19:18:42.136] [bmv2] [T] [thread 4476] [21.0] [cxt 0] Action MyIngress.drop
+[19:18:42.136] [bmv2] [T] [thread 4476] [21.0] [cxt 0] source_routing.p4(113) Primitive mark_to_drop()
+[19:18:42.136] [bmv2] [D] [thread 4476] [21.0] [cxt 0] Pipeline 'ingress': end
+[19:18:42.136] [bmv2] [D] [thread 4476] [21.0] [cxt 0] Egress port is 511
+[19:18:42.136] [bmv2] [D] [thread 4476] [21.0] [cxt 0] Dropping packet at the end of ingress
+[19:18:42.284] [bmv2] [D] [thread 4476] [22.0] [cxt 0] Processing packet received on port 3
+[19:18:42.284] [bmv2] [D] [thread 4476] [22.0] [cxt 0] Parser 'parser': start
+[19:18:42.284] [bmv2] [D] [thread 4476] [22.0] [cxt 0] Parser 'parser' entering state 'start'
+[19:18:42.284] [bmv2] [D] [thread 4476] [22.0] [cxt 0] Extracting header 'ethernet'
+[19:18:42.284] [bmv2] [D] [thread 4476] [22.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[19:18:42.284] [bmv2] [T] [thread 4476] [22.0] [cxt 0] Bytes parsed: 14
+[19:18:42.284] [bmv2] [D] [thread 4476] [22.0] [cxt 0] Parser 'parser': end
+[19:18:42.284] [bmv2] [D] [thread 4476] [22.0] [cxt 0] Pipeline 'ingress': start
+[19:18:42.284] [bmv2] [T] [thread 4476] [22.0] [cxt 0] source_routing.p4(133) Condition "hdr.srcRoutes[0].isValid()" (node_2) is false
+[19:18:42.284] [bmv2] [T] [thread 4476] [22.0] [cxt 0] Applying table 'tbl_drop'
+[19:18:42.284] [bmv2] [D] [thread 4476] [22.0] [cxt 0] Looking up key:
+
+[19:18:42.284] [bmv2] [D] [thread 4476] [22.0] [cxt 0] Table 'tbl_drop': miss
+[19:18:42.284] [bmv2] [D] [thread 4476] [22.0] [cxt 0] Action entry is MyIngress.drop - 
+[19:18:42.284] [bmv2] [T] [thread 4476] [22.0] [cxt 0] Action MyIngress.drop
+[19:18:42.284] [bmv2] [T] [thread 4476] [22.0] [cxt 0] source_routing.p4(113) Primitive mark_to_drop()
+[19:18:42.284] [bmv2] [D] [thread 4476] [22.0] [cxt 0] Pipeline 'ingress': end
+[19:18:42.284] [bmv2] [D] [thread 4476] [22.0] [cxt 0] Egress port is 511
+[19:18:42.284] [bmv2] [D] [thread 4476] [22.0] [cxt 0] Dropping packet at the end of ingress
+[19:18:42.403] [bmv2] [D] [thread 4476] [23.0] [cxt 0] Processing packet received on port 3
+[19:18:42.403] [bmv2] [D] [thread 4476] [23.0] [cxt 0] Parser 'parser': start
+[19:18:42.403] [bmv2] [D] [thread 4476] [23.0] [cxt 0] Parser 'parser' entering state 'start'
+[19:18:42.403] [bmv2] [D] [thread 4476] [23.0] [cxt 0] Extracting header 'ethernet'
+[19:18:42.403] [bmv2] [D] [thread 4476] [23.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[19:18:42.403] [bmv2] [T] [thread 4476] [23.0] [cxt 0] Bytes parsed: 14
+[19:18:42.403] [bmv2] [D] [thread 4476] [23.0] [cxt 0] Parser 'parser': end
+[19:18:42.403] [bmv2] [D] [thread 4476] [23.0] [cxt 0] Pipeline 'ingress': start
+[19:18:42.403] [bmv2] [T] [thread 4476] [23.0] [cxt 0] source_routing.p4(133) Condition "hdr.srcRoutes[0].isValid()" (node_2) is false
+[19:18:42.403] [bmv2] [T] [thread 4476] [23.0] [cxt 0] Applying table 'tbl_drop'
+[19:18:42.403] [bmv2] [D] [thread 4476] [23.0] [cxt 0] Looking up key:
+
+[19:18:42.403] [bmv2] [D] [thread 4476] [23.0] [cxt 0] Table 'tbl_drop': miss
+[19:18:42.403] [bmv2] [D] [thread 4476] [23.0] [cxt 0] Action entry is MyIngress.drop - 
+[19:18:42.403] [bmv2] [T] [thread 4476] [23.0] [cxt 0] Action MyIngress.drop
+[19:18:42.403] [bmv2] [T] [thread 4476] [23.0] [cxt 0] source_routing.p4(113) Primitive mark_to_drop()
+[19:18:42.403] [bmv2] [D] [thread 4476] [23.0] [cxt 0] Pipeline 'ingress': end
+[19:18:42.403] [bmv2] [D] [thread 4476] [23.0] [cxt 0] Egress port is 511
+[19:18:42.403] [bmv2] [D] [thread 4476] [23.0] [cxt 0] Dropping packet at the end of ingress
+[19:18:42.723] [bmv2] [D] [thread 4476] [24.0] [cxt 0] Processing packet received on port 2
+[19:18:42.723] [bmv2] [D] [thread 4476] [24.0] [cxt 0] Parser 'parser': start
+[19:18:42.723] [bmv2] [D] [thread 4476] [24.0] [cxt 0] Parser 'parser' entering state 'start'
+[19:18:42.723] [bmv2] [D] [thread 4476] [24.0] [cxt 0] Extracting header 'ethernet'
+[19:18:42.723] [bmv2] [D] [thread 4476] [24.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[19:18:42.723] [bmv2] [T] [thread 4476] [24.0] [cxt 0] Bytes parsed: 14
+[19:18:42.723] [bmv2] [D] [thread 4476] [24.0] [cxt 0] Parser 'parser': end
+[19:18:42.723] [bmv2] [D] [thread 4476] [24.0] [cxt 0] Pipeline 'ingress': start
+[19:18:42.723] [bmv2] [T] [thread 4476] [24.0] [cxt 0] source_routing.p4(133) Condition "hdr.srcRoutes[0].isValid()" (node_2) is false
+[19:18:42.723] [bmv2] [T] [thread 4476] [24.0] [cxt 0] Applying table 'tbl_drop'
+[19:18:42.723] [bmv2] [D] [thread 4476] [24.0] [cxt 0] Looking up key:
+
+[19:18:42.723] [bmv2] [D] [thread 4476] [24.0] [cxt 0] Table 'tbl_drop': miss
+[19:18:42.723] [bmv2] [D] [thread 4476] [24.0] [cxt 0] Action entry is MyIngress.drop - 
+[19:18:42.723] [bmv2] [T] [thread 4476] [24.0] [cxt 0] Action MyIngress.drop
+[19:18:42.723] [bmv2] [T] [thread 4476] [24.0] [cxt 0] source_routing.p4(113) Primitive mark_to_drop()
+[19:18:42.724] [bmv2] [D] [thread 4476] [24.0] [cxt 0] Pipeline 'ingress': end
+[19:18:42.724] [bmv2] [D] [thread 4476] [24.0] [cxt 0] Egress port is 511
+[19:18:42.724] [bmv2] [D] [thread 4476] [24.0] [cxt 0] Dropping packet at the end of ingress
+[19:18:42.795] [bmv2] [D] [thread 4476] [25.0] [cxt 0] Processing packet received on port 2
+[19:18:42.795] [bmv2] [D] [thread 4476] [25.0] [cxt 0] Parser 'parser': start
+[19:18:42.795] [bmv2] [D] [thread 4476] [25.0] [cxt 0] Parser 'parser' entering state 'start'
+[19:18:42.795] [bmv2] [D] [thread 4476] [25.0] [cxt 0] Extracting header 'ethernet'
+[19:18:42.795] [bmv2] [D] [thread 4476] [25.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[19:18:42.795] [bmv2] [T] [thread 4476] [25.0] [cxt 0] Bytes parsed: 14
+[19:18:42.795] [bmv2] [D] [thread 4476] [25.0] [cxt 0] Parser 'parser': end
+[19:18:42.795] [bmv2] [D] [thread 4476] [25.0] [cxt 0] Pipeline 'ingress': start
+[19:18:42.795] [bmv2] [T] [thread 4476] [25.0] [cxt 0] source_routing.p4(133) Condition "hdr.srcRoutes[0].isValid()" (node_2) is false
+[19:18:42.795] [bmv2] [T] [thread 4476] [25.0] [cxt 0] Applying table 'tbl_drop'
+[19:18:42.795] [bmv2] [D] [thread 4476] [25.0] [cxt 0] Looking up key:
+
+[19:18:42.795] [bmv2] [D] [thread 4476] [25.0] [cxt 0] Table 'tbl_drop': miss
+[19:18:42.795] [bmv2] [D] [thread 4476] [25.0] [cxt 0] Action entry is MyIngress.drop - 
+[19:18:42.795] [bmv2] [T] [thread 4476] [25.0] [cxt 0] Action MyIngress.drop
+[19:18:42.795] [bmv2] [T] [thread 4476] [25.0] [cxt 0] source_routing.p4(113) Primitive mark_to_drop()
+[19:18:42.795] [bmv2] [D] [thread 4476] [25.0] [cxt 0] Pipeline 'ingress': end
+[19:18:42.795] [bmv2] [D] [thread 4476] [25.0] [cxt 0] Egress port is 511
+[19:18:42.795] [bmv2] [D] [thread 4476] [25.0] [cxt 0] Dropping packet at the end of ingress
+[19:18:42.795] [bmv2] [D] [thread 4476] [26.0] [cxt 0] Processing packet received on port 2
+[19:18:42.795] [bmv2] [D] [thread 4476] [26.0] [cxt 0] Parser 'parser': start
+[19:18:42.796] [bmv2] [D] [thread 4476] [26.0] [cxt 0] Parser 'parser' entering state 'start'
+[19:18:42.796] [bmv2] [D] [thread 4476] [26.0] [cxt 0] Extracting header 'ethernet'
+[19:18:42.796] [bmv2] [D] [thread 4476] [26.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[19:18:42.796] [bmv2] [T] [thread 4476] [26.0] [cxt 0] Bytes parsed: 14
+[19:18:42.796] [bmv2] [D] [thread 4476] [26.0] [cxt 0] Parser 'parser': end
+[19:18:42.796] [bmv2] [D] [thread 4476] [26.0] [cxt 0] Pipeline 'ingress': start
+[19:18:42.796] [bmv2] [T] [thread 4476] [26.0] [cxt 0] source_routing.p4(133) Condition "hdr.srcRoutes[0].isValid()" (node_2) is false
+[19:18:42.796] [bmv2] [T] [thread 4476] [26.0] [cxt 0] Applying table 'tbl_drop'
+[19:18:42.796] [bmv2] [D] [thread 4476] [26.0] [cxt 0] Looking up key:
+
+[19:18:42.796] [bmv2] [D] [thread 4476] [26.0] [cxt 0] Table 'tbl_drop': miss
+[19:18:42.796] [bmv2] [D] [thread 4476] [26.0] [cxt 0] Action entry is MyIngress.drop - 
+[19:18:42.796] [bmv2] [T] [thread 4476] [26.0] [cxt 0] Action MyIngress.drop
+[19:18:42.796] [bmv2] [T] [thread 4476] [26.0] [cxt 0] source_routing.p4(113) Primitive mark_to_drop()
+[19:18:42.796] [bmv2] [D] [thread 4476] [26.0] [cxt 0] Pipeline 'ingress': end
+[19:18:42.796] [bmv2] [D] [thread 4476] [26.0] [cxt 0] Egress port is 511
+[19:18:42.796] [bmv2] [D] [thread 4476] [26.0] [cxt 0] Dropping packet at the end of ingress
+[19:18:42.918] [bmv2] [D] [thread 4476] [27.0] [cxt 0] Processing packet received on port 2
+[19:18:42.918] [bmv2] [D] [thread 4476] [27.0] [cxt 0] Parser 'parser': start
+[19:18:42.919] [bmv2] [D] [thread 4476] [27.0] [cxt 0] Parser 'parser' entering state 'start'
+[19:18:42.919] [bmv2] [D] [thread 4476] [27.0] [cxt 0] Extracting header 'ethernet'
+[19:18:42.919] [bmv2] [D] [thread 4476] [27.0] [cxt 0] Parser state 'start' has no switch, going to default next state
+[19:18:42.919] [bmv2] [T] [thread 4476] [27.0] [cxt 0] Bytes parsed: 14
+[19:18:42.919] [bmv2] [D] [thread 4476] [27.0] [cxt 0] Parser 'parser': end
+[19:18:42.919] [bmv2] [D] [thread 4476] [27.0] [cxt 0] Pipeline 'ingress': start
+[19:18:42.919] [bmv2] [T] [thread 4476] [27.0] [cxt 0] source_routing.p4(133) Condition "hdr.srcRoutes[0].isValid()" (node_2) is false
+[19:18:42.919] [bmv2] [T] [thread 4476] [27.0] [cxt 0] Applying table 'tbl_drop'
+[19:18:42.919] [bmv2] [D] [thread 4476] [27.0] [cxt 0] Looking up key:
+
+[19:18:42.919] [bmv2] [D] [thread 4476] [27.0] [cxt 0] Table 'tbl_drop': miss
+[19:18:42.919] [bmv2] [D] [thread 4476] [27.0] [cxt 0] Action entry is MyIngress.drop - 
+[19:18:42.919] [bmv2] [T] [thread 4476] [27.0] [cxt 0] Action MyIngress.drop
+[19:18:42.919] [bmv2] [T] [thread 4476] [27.0] [cxt 0] source_routing.p4(113) Primitive mark_to_drop()
+[19:18:42.919] [bmv2] [D] [thread 4476] [27.0] [cxt 0] Pipeline 'ingress': end
+[19:18:42.919] [bmv2] [D] [thread 4476] [27.0] [cxt 0] Egress port is 511
+[19:18:42.919] [bmv2] [D] [thread 4476] [27.0] [cxt 0] Dropping packet at the end of ingress
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
